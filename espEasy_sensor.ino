@@ -11,7 +11,7 @@
 Timers<4> timers;
 
 String hostname = "ESP_Sensor";
-const char* ssid = "|oioioio|";
+const char* ssid = "|oooooi|";
 const char* password = "pmgana921";
 
 
@@ -59,11 +59,11 @@ int interval= 3000;
 
   wifiStart();
   otaStart();
-  //serverHandle();
+  serverHandle();
   ahtBegin();
 
   // setup timers multitasking 
-  //timers.attach(0,interval*3,sendWS); 
+  timers.attach(0,interval*3,sendWS); 
   timers.attach(1,interval*2,readSensorsAHT); 
 
 }
